@@ -1,10 +1,11 @@
-import {App} from '@/components/App';
-import {Movies} from '@/components/Movies';
+import {app} from '@/components/app';
+import {movies} from '@/components/movies';
+import {favourite} from '@/components/favourite';
+import '@/index.css';
 
-const components = [Movies];
+const components = [movies, favourite];
 
-const app = new App('#app', {
-  components
+document.addEventListener('DOMContentLoaded', function() {
+  app('#app', {components});
 });
 
-app.init();
